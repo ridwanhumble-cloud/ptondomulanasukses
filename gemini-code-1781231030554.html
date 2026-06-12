@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT ONDO MULANA SUKSES - Profil Perusahaan Penerbitan</title>
+    <style>
+        /* PALET WARNA & RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --putih: #FFFFFF;
+            --abu-terang: #F8F9FA;
+            --biru-tua: #0A2540;
+            --emas: #D4AF37;
+            --teks-gelap: #2D3748;
+            --teks-terang: #718096;
+        }
+
+        body {
+            background-color: var(--putih);
+            color: var(--teks-gelap);
+            line-height: 1.6;
+        }
+
+        /* HEADER & NAVIGASI */
+        header {
+            background-color: var(--biru-tua);
+            color: var(--putih);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo h1 {
+            font-size: 22px;
+            color: var(--putih);
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .logo span {
+            color: var(--emas);
+            font-size: 14px;
+            display: block;
+            font-weight: 400;
+            margin-top: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: var(--putih);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--emas);
+        }
+
+        /* HERO SECTION */
+        #beranda {
+            padding: 200px 20px 120px 20px;
+            background: linear-gradient(135deg, #0A2540 0%, #1A365D 100%);
+            color: var(--putih);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-content h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+            color: var(--putih);
+            line-height: 1.3;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 0;
+            color: #E2E8F0;
+            font-weight: 300;
+        }
+
+        /* SECTION FORMAT UTAMA */
+        section {
+            padding: 90px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            color: var(--biru-tua);
+            margin-bottom: 15px;
+            position: relative;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--emas);
+            margin: 10px auto 0 auto;
+        }
+
+        .section-desc {
+            text-align: center;
+            color: var(--teks-terang);
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+            font-size: 16px;
+        }
+
+        /* FOKUS PENERBITAN (GRID) */
+        .grid-fokus {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card-fokus {
+            background: var(--abu-terang);
+            padding: 30px;
+            border-radius: 6px;
+            border-top: 4px solid var(--biru-tua);
+        }
+
+        .card-fokus h3 {
+            color: var(--biru-tua);
+            margin-bottom: 12px;
+            font-size: 19px;
+            font-weight: 600;
+        }
+
+        .card-fokus p {
+            color: var(--teks-gelap);
+            font-size: 15px;
+        }
+
+        /* PROFIL PERUSAHAAN */
+        #profil {
+            background-color: var(--abu-terang);
+        }
+
+        .profil-content {
+            background: var(--putih);
+            padding: 45px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .profil-text p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        /* LEGALITAS & TABEL */
+        .legalitas-wrapper {
+            margin-top: 20px;
+        }
+
+        .legalitas-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 15px;
+        }
+
+        .legalitas-table th, .legalitas-table td {
+            border: 1px solid #E2E8F0;
+            padding: 16px;
+            text-align: left;
+        }
+
+        .legalitas-table th {
+            background-color: var(--biru-tua);
+            color: var(--putih);
+            font-weight: 600;
+        }
+
+        .legalitas-table tr:nth-child(even) {
+            background-color: var(--abu-terang);
+        }
+
+        /* KATALOG PUBLIKASI */
+        .grid-publikasi {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card-buku {
+            border: 1px solid #E2E8F0;
+            border-radius: 6px;
+            overflow: hidden;
+            background: var(--putih);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+
+        .cover-visual {
+            height: 340px;
+            background-color: var(--biru-tua);
+            color: var(--emas);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 25px;
+            font-weight: 700;
+            font-size: 17px;
+            border-bottom: 5px solid var(--emas);
+        }
+
+        .cover-visual span {
+            color: var(--putih);
+            font-size: 12px;
+            font-weight: 400;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .buku-info {
+            padding: 20px;
+        }
+
+        .buku-kategori {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: var(--emas);
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .buku-info h3 {
+            font-size: 17px;
+            color: var(--biru-tua);
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .buku-penulis {
+            font-size: 13px;
+            color: var(--teks-terang);
+            margin-bottom: 12px;
+        }
+
+        .buku-info p {
+            font-size: 14px;
+            color: var(--teks-gelap);
+        }
+
+        /* KONTAK */
+        #kontak {
+            background-color: var(--biru-tua);
+            color: var(--putih);
+        }
+
+        #kontak .section-title {
+            color: var(--putih);
+        }
+
+        .kontak-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .kontak-detail h3 {
+            color: var(--emas);
+            margin-bottom: 25px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .kontak-item {
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+        .kontak-item strong {
+            display: block;
+            color: var(--emas);
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .peta-lokasi {
+            background: #1A365D;
+            border: 1px solid #2D4A77;
+            height: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            color: #E2E8F0;
+            font-size: 15px;
+            text-align: center;
+            padding: 20px;
+            line-height: 1.8;
+        }
+
+        /* STYLING TAMBAHAN UNTUK BOX INFORMASI PERSIAPAN */
+        .box-persiapan {
+            grid-column: 1 / -1;
+            background-color: var(--putih);
+            border-left: 4px solid var(--emas);
+            padding: 25px;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            text-align: center;
+        }
+
+        .box-persiapan p {
+            font-size: 16px;
+            color: var(--teks-gelap);
+            font-style: italic;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #051424;
+            color: #A0AEC0;
+            padding: 35px 20px;
+            text-align: center;
+            font-size: 14px;
+            border-top: 1px solid #1A365D;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; text-align: center; }
+            nav ul { margin-top: 20px; flex-wrap: wrap; justify-content: center; }
+            nav ul li { margin: 5px 12px; }
+            .hero-content h2 { font-size: 28px; }
+            #beranda { padding-top: 240px; }
+            .profil-content { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <h1>PT ONDO MULANA SUKSES</h1>
+                <span>Divisi Penerbitan: ONDO Publishing</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#profil">Profil Perusahaan</a></li>
+                    <li><a href="#legalitas">Legalitas</a></li>
+                    <li><a href="#publikasi">Publikasi</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="beranda">
+        <div class="hero-content">
+            <h2>Penerbitan Buku dan Perangkat Media Edukatif Nasional</h2>
+            <p>PT ONDO MULANA SUKSES berkomitmen menghadirkan publikasi literasi bermutu tinggi serta produk media pembelajaran yang inovatif untuk mendukung kemajuan ekosistem pendidikan di Indonesia.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">Fokus Produksi & Penerbitan</h2>
+            <p class="section-desc">Kategori portofolio produk edukasi dan penerbitan berkala yang dikembangkan oleh PT ONDO MULANA SUKSES.</p>
+            
+            <div class="grid-fokus">
+                <div class="card-fokus">
+                    <h3>Penerbitan Buku</h3>
+                    <p>Memproduksi literasi cetak berupa buku teks, buku referensi akademis, dan karya non-fiksi umum yang berbobot.</p>
+                </div>
+                <div class="card-fokus">
+                    <h3>Workbook & Buku Kerja</h3>
+                    <p>Penyusunan materi latihan terstruktur dan aplikatif untuk membantu proses evaluasi belajar mandiri.</p>
+                </div>
+                <div class="card-fokus">
+                    <h3>Activity Book</h3>
+                    <p>Produksi lembar aktivitas kreatif dan interaktif yang dirancang khusus guna menstimulasi tumbuh kembang anak.</p>
+                </div>
+                <div class="card-fokus">
+                    <h3>Buku Anak</h3>
+                    <p>Penerbitan buku bacaan anak bergambar dengan muatan nilai moral, budi pekerti, dan pengetahuan dasar.</p>
+                </div>
+                <div class="card-fokus">
+                    <h3>Media Pembelajaran</h3>
+                    <p>Pengembangan instrumen peraga serta perangkat bantu ajar visual guna efektivitas penyampaian materi di kelas.</p>
+                </div>
+                <div class="card-fokus">
+                    <h3>Produk Edukatif</h3>
+                    <p>Pengembangan produk edukatif kreatif yang dirancang untuk mendukung literasi, pembelajaran, dan peningkatan kualitas pendidikan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="profil">
+        <div class="container">
+            <h2 class="section-title">Profil Perusahaan</h2>
+            <p class="section-desc">Mengenal lebih dekat komitmen dan arah tujuan korporasi PT ONDO MULANA SUKSES.</p>
+            
+            <div class="profil-content">
+                <div class="profil-text">
+                    <p><strong>PT ONDO MULANA SUKSES</strong> merupakan perusahaan yang bergerak dalam bidang penerbitan buku, workbook, activity book, buku anak, media pembelajaran, dan produk edukatif. Mengintegrasikan visi pendidikan yang berwawasan, perusahaan menjalankan kegiatan penerbitan buku melalui divisi penerbitan dengan imprint ONDO Publishing.</p>
+                    
+                    <p>Dalam menjalankan roda produksinya, PT ONDO MULANA SUKSES menerapkan standar kurasi serta penyuntingan yang terukur secara internal. Hal ini dilakukan demi melahirkan produk bacaan, buku kerja, maupun alat peraga edukasi yang valid secara substansi ilmiah dan menarik secara visual. Perusahaan memposisikan diri sebagai entitas resmi yang mendukung kemajuan literasi masyarakat secara luas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="legalitas">
+        <div class="container">
+            <h2 class="section-title">Legalitas Instansi</h2>
+            <p class="section-desc">Informasi resmi badan hukum PT ONDO MULANA SUKSES sebagai penerbit terdaftar di Republik Indonesia.</p>
+            
+            <div class="legalitas-wrapper">
+                <table class="legalitas-table">
+                    <thead>
+                        <tr>
+                            <th>Komponen Identitas</th>
+                            <th>Keterangan Resmi Perusahaan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Nama Badan Hukum</strong></td>
+                            <td>PT ONDO MULANA SUKSES</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nomor Pengesahan AHU</strong></td>
+                            <td>AHU-037641.AH.01.30.Tahun 2025</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Divisi Penerbitan / Imprint</strong></td>
+                            <td>ONDO Publishing</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bidang Usaha Utama</strong></td>
+                            <td>Penerbitan Buku, Buku Kerja, dan Perangkat Edukasi</td>
+                        </tr>
+                        <tr>
+                            <td><strong>KBLI</strong></td>
+                            <td>58110 – Penerbitan Buku</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Penanggung Jawab</strong></td>
+                            <td>Ridwan, S.Pd.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Status Operasional</strong></td>
+                            <td>Aktif dan Sah Secara Hukum</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="publikasi" style="background-color: var(--abu-terang);">
+        <div class="container">
+            <h2 class="section-title">Daftar Publikasi</h2>
+            <p class="section-desc">Katalog portofolio buku beserta produk edukatif resmi PT ONDO MULANA SUKSES.</p>
+            
+            <div class="grid-publikasi">
+                <div class="box-persiapan">
+                    <p>"Publikasi dalam proses persiapan. Halaman ini disediakan sebagai titik akses resmi daftar buku yang diterbitkan oleh PT ONDO MULANA SUKSES. Informasi publikasi akan diperbarui secara berkala."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak">
+        <div class="container">
+            <h2 class="section-title">Kontak Perusahaan</h2>
+            <p class="section-desc" style="color: #E2E8F0;">Saluran komunikasi resmi korespondensi administratif PT ONDO MULANA SUKSES.</p>
+            
+            <div class="kontak-container">
+                <div class="kontak-detail">
+                    <h3>PT ONDO MULANA SUKSES</h3>
+                    <div class="kontak-item">
+                        <strong>Penanggung Jawab Perusahaan:</strong>
+                        Ridwan, S.Pd.
+                    </div>
+                    <div class="kontak-item">
+                        <strong>Lokasi Perusahaan:</strong>
+                        Kota Padangsidimpuan, Sumatera Utara, Indonesia
+                    </div>
+                    <div class="kontak-item">
+                        <strong>Nomor WhatsApp Resmi:</strong>
+                        081361523887
+                    </div>
+                    <div class="kontak-item">
+                        <strong>Alamat Surat Elektronik (E-mail):</strong>
+                        ondomulanasukses@gmail.com
+                    </div>
+                    <div class="kontak-item">
+                        <strong>Jam Operasional Kantor:</strong>
+                        Senin - Jumat | Pukul 08.00 - 16.00 WIB
+                    </div>
+                </div>
+                <div class="kontak-peta">
+                    <h3>Lokasi Perusahaan</h3>
+                    <div class="peta-lokasi">
+                        <strong>Kota Padangsidimpuan</strong><br>
+                        Sumatera Utara<br>
+                        Indonesia
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 PT ONDO MULANA SUKSES. Hak Cipta Dilindungi Undang-Undang. Profil Resmi Penerbit Terdaftar.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

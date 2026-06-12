@@ -192,6 +192,34 @@
             text-align: justify;
         }
 
+        /* VISI MISI STYLING */
+        .visi-misi-section {
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 1px solid #E2E8F0;
+        }
+
+        .visi-misi-section h4 {
+            color: var(--biru-tua);
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .visi-misi-section h4:not(:first-child) {
+            margin-top: 25px;
+        }
+
+        .visi-misi-section ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .visi-misi-section ul li {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
         /* LEGALITAS & TABEL */
         .legalitas-wrapper {
             margin-top: 20px;
@@ -220,6 +248,13 @@
             background-color: var(--abu-terang);
         }
 
+        .legalitas-note {
+            font-size: 15px;
+            color: var(--teks-gelap);
+            font-style: italic;
+            margin-top: 15px;
+        }
+
         /* KATALOG PUBLIKASI */
         .grid-publikasi {
             display: grid;
@@ -233,10 +268,11 @@
             overflow: hidden;
             background: var(--putih);
             box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            position: relative;
         }
 
         .cover-visual {
-            height: 340px;
+            height: 260px;
             background-color: var(--biru-tua);
             color: var(--emas);
             display: flex;
@@ -266,7 +302,7 @@
         .buku-kategori {
             font-size: 11px;
             text-transform: uppercase;
-            color: var(--emas);
+            color: var(--teks-terang);
             font-weight: 700;
             margin-bottom: 6px;
             letter-spacing: 0.5px;
@@ -275,19 +311,37 @@
         .buku-info h3 {
             font-size: 17px;
             color: var(--biru-tua);
-            margin-bottom: 6px;
+            margin-bottom: 12px;
             font-weight: 600;
         }
 
-        .buku-penulis {
-            font-size: 13px;
-            color: var(--teks-terang);
-            margin-bottom: 12px;
+        /* BADGE STATUS */
+        .badge-status {
+            display: inline-block;
+            background-color: var(--emas);
+            color: var(--biru-tua);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .buku-info p {
-            font-size: 14px;
+        /* CATATAN PENERBIT STYLING */
+        .catatan-penerbit {
+            margin-top: 50px;
+            background-color: var(--putih);
+            border-left: 4px solid var(--emas);
+            padding: 25px;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+
+        .catatan-penerbit p {
+            font-size: 15px;
             color: var(--teks-gelap);
+            text-align: justify;
         }
 
         /* KONTAK */
@@ -342,23 +396,6 @@
             line-height: 1.8;
         }
 
-        /* STYLING TAMBAHAN UNTUK BOX INFORMASI PERSIAPAN */
-        .box-persiapan {
-            grid-column: 1 / -1;
-            background-color: var(--putih);
-            border-left: 4px solid var(--emas);
-            padding: 25px;
-            border-radius: 4px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
-            text-align: center;
-        }
-
-        .box-persiapan p {
-            font-size: 16px;
-            color: var(--teks-gelap);
-            font-style: italic;
-        }
-
         /* FOOTER */
         footer {
             background-color: #051424;
@@ -393,7 +430,7 @@
                     <li><a href="#beranda">Beranda</a></li>
                     <li><a href="#profil">Profil Perusahaan</a></li>
                     <li><a href="#legalitas">Legalitas</a></li>
-                    <li><a href="#publikasi">Publikasi</a></li>
+                    <li><a href="#publikasi">Katalog Terbitan</a></li>
                     <li><a href="#kontak">Kontak</a></li>
                 </ul>
             </nav>
@@ -403,7 +440,7 @@
     <section id="beranda">
         <div class="hero-content">
             <h2>Penerbitan Buku dan Perangkat Media Edukatif Nasional</h2>
-            <p>PT ONDO MULANA SUKSES berkomitmen menghadirkan publikasi literasi bermutu tinggi serta produk media pembelajaran yang inovatif untuk mendukung kemajuan ekosistem pendidikan di Indonesia.</p>
+            <p>PT ONDO MULANA SUKSES berkomitmen menghadirkan publikasi literasi bermutu tinggi serta produk media pembelajaran yang inovatif untuk mendukung kemajuan ekosistem pendidikan di Indonesia. ONDO Publishing merupakan divisi penerbitan (imprint) yang dikelola oleh PT ONDO MULANA SUKSES.</p>
         </div>
     </section>
 
@@ -450,7 +487,23 @@
                 <div class="profil-text">
                     <p><strong>PT ONDO MULANA SUKSES</strong> merupakan perusahaan yang bergerak dalam bidang penerbitan buku, workbook, activity book, buku anak, media pembelajaran, dan produk edukatif. Mengintegrasikan visi pendidikan yang berwawasan, perusahaan menjalankan kegiatan penerbitan buku melalui divisi penerbitan dengan imprint ONDO Publishing.</p>
                     
+                    <p>PT ONDO MULANA SUKSES merupakan badan usaha berbadan hukum yang bergerak di bidang penerbitan buku, pengembangan media pembelajaran, produk edukatif, dan publikasi literasi. Dalam kegiatan penerbitan, perusahaan menjalankan operasional melalui imprint ONDO Publishing sebagai identitas publikasi dan pengembangan karya terbitan.</p>
+                    
                     <p>Dalam menjalankan roda produksinya, PT ONDO MULANA SUKSES menerapkan standar kurasi serta penyuntingan yang terukur secara internal. Hal ini dilakukan demi melahirkan produk bacaan, buku kerja, maupun alat peraga edukasi yang valid secara substansi ilmiah dan menarik secara visual. Perusahaan memposisikan diri sebagai entitas resmi yang mendukung kemajuan literasi masyarakat secara luas.</p>
+                </div>
+
+                <div class="visi-misi-section">
+                    <h4>Visi</h4>
+                    <p>Menjadi perusahaan penerbitan dan pengembang media pembelajaran yang inovatif, berkualitas, dan berkontribusi bagi kemajuan pendidikan Indonesia.</p>
+                    
+                    <h4>Misi</h4>
+                    <ul>
+                        <li>Menghasilkan buku dan media pembelajaran yang berkualitas.</li>
+                        <li>Mendukung peningkatan literasi masyarakat.</li>
+                        <li>Mengembangkan produk edukatif yang inovatif.</li>
+                        <li>Menyediakan publikasi yang bermanfaat bagi dunia pendidikan.</li>
+                        <li>Menjalankan usaha secara profesional dan berkelanjutan.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -479,6 +532,10 @@
                             <td>AHU-037641.AH.01.30.Tahun 2025</td>
                         </tr>
                         <tr>
+                            <td><strong>Nomor NIB</strong></td>
+                            <td>[placeholder NIB]</td>
+                        </tr>
+                        <tr>
                             <td><strong>Divisi Penerbitan / Imprint</strong></td>
                             <td>ONDO Publishing</td>
                         </tr>
@@ -500,19 +557,76 @@
                         </tr>
                     </tbody>
                 </table>
+                <p class="legalitas-note">PT ONDO MULANA SUKSES menjalankan kegiatan penerbitan buku sesuai bidang usaha yang tercantum dalam legalitas perusahaan.</p>
             </div>
         </div>
     </section>
 
     <section id="publikasi" style="background-color: var(--abu-terang);">
         <div class="container">
-            <h2 class="section-title">Daftar Publikasi</h2>
-            <p class="section-desc">Katalog portofolio buku beserta produk edukatif resmi PT ONDO MULANA SUKSES.</p>
+            <h2 class="section-title">Katalog Terbitan</h2>
+            <p class="section-desc">Daftar judul publikasi buku beserta produk edukatif resmi PT ONDO MULANA SUKSES yang dapat diakses oleh publik.</p>
             
             <div class="grid-publikasi">
-                <div class="box-persiapan">
-                    <p>"Publikasi dalam proses persiapan. Halaman ini disediakan sebagai titik akses resmi daftar buku yang diterbitkan oleh PT ONDO MULANA SUKSES. Informasi publikasi akan diperbarui secara berkala."</p>
+                <div class="card-buku">
+                    <div class="cover-visual">
+                        Ayo Mewarnai Hewan Lucu
+                        <span>Buku Aktivitas Anak</span>
+                    </div>
+                    <div class="buku-info">
+                        <div class="buku-kategori">Kategori: Buku Aktivitas Anak</div>
+                        <h3>Ayo Mewarnai Hewan Lucu</h3>
+                        <div class="badge-status">Dalam Penyusunan</div>
+                    </div>
                 </div>
+                <div class="card-buku">
+                    <div class="cover-visual">
+                        Seri Asmaul Husna untuk Anak
+                        <span>Pendidikan Islam Anak</span>
+                    </div>
+                    <div class="buku-info">
+                        <div class="buku-kategori">Kategori: Pendidikan Islam Anak</div>
+                        <h3>Seri Asmaul Husna untuk Anak</h3>
+                        <div class="badge-status">Dalam Penyusunan</div>
+                    </div>
+                </div>
+                <div class="card-buku">
+                    <div class="cover-visual">
+                        Buku Aktivitas Anak Muslim
+                        <span>Activity Book</span>
+                    </div>
+                    <div class="buku-info">
+                        <div class="buku-kategori">Kategori: Activity Book</div>
+                        <h3>Buku Aktivitas Anak Muslim</h3>
+                        <div class="badge-status">Dalam Penyusunan</div>
+                    </div>
+                </div>
+                <div class="card-buku">
+                    <div class="cover-visual">
+                        Worksheet Edukatif Anak
+                        <span>Media Pembelajaran</span>
+                    </div>
+                    <div class="buku-info">
+                        <div class="buku-kategori">Kategori: Media Pembelajaran</div>
+                        <h3>Worksheet Edukatif Anak</h3>
+                        <div class="badge-status">Dalam Penyusunan</div>
+                    </div>
+                </div>
+                <div class="card-buku">
+                    <div class="cover-visual">
+                        Seri Literasi Anak Indonesia
+                        <span>Buku Anak</span>
+                    </div>
+                    <div class="buku-info">
+                        <div class="buku-kategori">Kategori: Buku Anak</div>
+                        <h3>Seri Literasi Anak Indonesia</h3>
+                        <div class="badge-status">Dalam Penyusunan</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="catatan-penerbit">
+                <p>Halaman ini merupakan pusat informasi publikasi PT ONDO MULANA SUKSES. Setiap buku yang diterbitkan dan didaftarkan ISBN akan ditampilkan pada halaman ini sebagai arsip dan akses publikasi resmi perusahaan.</p>
             </div>
         </div>
     </section>
